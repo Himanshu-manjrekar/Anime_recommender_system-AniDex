@@ -1,7 +1,7 @@
 .log
 anime_recommender
-application_old.py
-Untitled.ipynb
+applicaation_old.py
+.ipynb
 __pycache__
 .ipynb_checkpoints
-.egg-info
+AniDex.egg-info
