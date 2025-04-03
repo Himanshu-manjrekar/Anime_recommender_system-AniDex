@@ -1,0 +1,9 @@
+[ 2025-03-05 13:33:12,581 ] 29 root - INFO - Making Initial request to set the next page flag. 
+[ 2025-03-05 13:33:13,472 ] 37 root - INFO - Data Ingestion Started. 
+[ 2025-03-05 13:55:24,790 ] 70 root - INFO -  Data Ingestion Completed. 
+[ 2025-03-05 13:55:24,792 ] 28 root - INFO - Building the DataFrame 
+[ 2025-03-05 13:55:24,868 ] 30 root - INFO - Built the Dataframe successfully 
+[ 2025-03-05 13:55:24,868 ] 38 root - INFO - Transforming the Data. 
+[ 2025-03-05 14:07:05,973 ] 61 root - INFO - Data Transformation Completed. 
+[ 2025-03-05 14:07:05,977 ] 68 root - INFO - Saving the Data in Anime_data.pkl file 
+[ 2025-03-05 14:07:06,754 ] 70 root - INFO - Data Saved Successfully. 

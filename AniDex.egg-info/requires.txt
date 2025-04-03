@@ -1,0 +1,12 @@
+Flask
+requests
+nltk
+spacy
+tensorflow
+numpy
+pandas
+scikit-learn
+dill
+transformers
+sentence-transformers
+tf-keras

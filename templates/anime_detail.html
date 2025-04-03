@@ -1,0 +1,54 @@
+<!-- templates/anime_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ anime.title }} - AniDex{% endblock %}
+
+{% block content %}
+<section class="anime-detail">
+    {% if anime %}
+        <div class="anime-poster">
+            <img src="{{ anime.images.jpg.large_image_url }}" alt="{{ anime.title }}">
+        </div>
+        <div class="anime-info-detail">
+            <h1 class="anime-title">{{ anime.title }}</h1>
+            <div class="anime-meta">
+                <span>{{ anime.type or 'N/A' }}</span>
+                <span>{{ anime.status or 'N/A' }}</span>
+                <span>{{ anime.rating or 'N/A' }}</span>
+                <span>{{ anime.episodes|string + ' episodes' if anime.episodes else 'Episodes N/A' }}</span>
+            </div>
+            <div class="anime-synopsis">
+                <h3>Synopsis</h3>
+                <p>{{ anime.synopsis or 'No synopsis available.' }}</p>
+            </div>
+            <div class="anime-stats">
+                <div class="stat-box">
+                    <h4>Score</h4>
+                    <p>{{ anime.score or 'N/A' }}</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Ranked</h4>
+                    <p>#{{ anime.rank or 'N/A' }}</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Popularity</h4>
+                    <p>#{{ anime.popularity or 'N/A' }}</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Season</h4>
+                    <p>{{ (anime.season|capitalize + ' ' + anime.year|string) if anime.season else 'N/A' }}</p>
+                </div>
+            </div>
+            <div class="anime-details">
+                <h3>Details</h3>
+                <p><strong>Genres:</strong> {{ genres or 'N/A' }}</p>
+                <p><strong>Studios:</strong> {{ studios or 'N/A' }}</p>
+                <p><strong>Source:</strong> {{ anime.source or 'N/A' }}</p>
+                <p><strong>Duration:</strong> {{ anime.duration or 'N/A' }}</p>
+            </div>
+        </div>
+    {% else %}
+        <div class="error">Failed to load anime details. Please try again later.</div>
+    {% endif %}
+</section>
+{% endblock %}

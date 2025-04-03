@@ -1,0 +1,33 @@
+[ 2025-03-07 12:40:49,097 ] 149 tensorflow - WARNING - From E:\Python\Data_science_project\Anime_recommender_system\anime_recommender\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+ 
+[ 2025-03-07 12:40:50,594 ] 35 root - INFO - Making Initial request to set the next page flag. 
+[ 2025-03-07 12:40:51,453 ] 43 root - INFO - Data Ingestion Started. 
+[ 2025-03-07 13:06:25,680 ] 76 root - INFO -  Data Ingestion Completed. 
+[ 2025-03-07 13:06:25,680 ] 60 root - INFO - Saving Animes Dictionary 
+[ 2025-03-07 13:06:26,190 ] 63 root - INFO - Animes Dictionary saved successfully at artifacts\data\raw\raw_data.pkl 
+[ 2025-03-07 13:06:26,190 ] 70 root - INFO - Loading Animes Dictionary from artifacts\data\raw\raw_data.pkl 
+[ 2025-03-07 13:06:26,215 ] 28 root - INFO - Building the DataFrame 
+[ 2025-03-07 13:06:26,248 ] 30 root - INFO - Built the Dataframe successfully 
+[ 2025-03-07 13:06:26,248 ] 38 root - INFO - Started transforming the Data. 
+[ 2025-03-07 13:06:26,777 ] 54 root - INFO - title english, synonyms column transformation completed. 
+[ 2025-03-07 13:06:27,117 ] 58 root - INFO - Cleaning of updated synopsis completed 
+[ 2025-03-07 13:14:56,029 ] 60 root - INFO - preprocessing of updated synopsis completed 
+[ 2025-03-07 13:14:56,042 ] 63 root - INFO - Data Transformation Completed. 
+[ 2025-03-07 13:14:56,042 ] 60 root - INFO - Saving Preprocessed Data 
+[ 2025-03-07 13:14:56,502 ] 63 root - INFO - Preprocessed Data saved successfully at artifacts\data\data_frame\Anime_data.pkl 
+[ 2025-03-07 13:14:56,502 ] 70 root - INFO - Loading Preprocessed Data from artifacts\data\data_frame\Anime_data.pkl 
+[ 2025-03-07 13:14:56,534 ] 21 root - INFO - Model Initiallization Started 
+[ 2025-03-07 13:14:56,549 ] 210 sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu 
+[ 2025-03-07 13:14:56,549 ] 218 sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2 
+[ 2025-03-07 13:15:00,664 ] 23 root - INFO - Model Initiallized successfully 
+[ 2025-03-07 13:15:00,664 ] 60 root - INFO - Saving SBERT model 
+[ 2025-03-07 13:15:01,412 ] 63 root - INFO - SBERT model saved successfully at artifacts\model\SBERT_model.pkl 
+[ 2025-03-07 13:15:01,412 ] 70 root - INFO - Loading SBERT model from artifacts\model\SBERT_model.pkl 
+[ 2025-03-07 13:15:01,567 ] 37 root - INFO - Building the embedding matrix 
+[ 2025-03-07 13:15:01,567 ] 25 root - INFO - Creating Embeddings of synopsis 
+[ 2025-03-07 13:26:53,158 ] 27 root - INFO - Embeddings created Successfully 
+[ 2025-03-07 13:26:53,158 ] 28 root - INFO - Saving the Updated data frame 
+[ 2025-03-07 13:26:53,158 ] 60 root - INFO - Saving Data along with embeddings of synopsis 
+[ 2025-03-07 13:26:55,639 ] 63 root - INFO - Data along with embeddings of synopsis saved successfully at src\components\artifacts\data\data_frame\Anime_data_final.pkl 
+[ 2025-03-07 13:26:55,639 ] 30 root - INFO - Updated Dataframe saved successfully at src\components\artifacts\data\data_frame\Anime_data_final.pkl 
+[ 2025-03-07 13:26:55,671 ] 40 root - INFO - Embedding matrix built successfully 

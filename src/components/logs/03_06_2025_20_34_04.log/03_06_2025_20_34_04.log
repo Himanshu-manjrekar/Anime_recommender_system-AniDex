@@ -1,0 +1,10 @@
+[ 2025-03-06 20:34:37,459 ] 149 tensorflow - WARNING - From E:\Python\Data_science_project\Anime_recommender_system\anime_recommender\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+ 
+[ 2025-03-06 20:34:38,576 ] 21 root - INFO - Model Initiallization Started 
+[ 2025-03-06 20:34:38,592 ] 210 sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu 
+[ 2025-03-06 20:34:38,592 ] 218 sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2 
+[ 2025-03-06 20:34:42,654 ] 23 root - INFO - Model Initiallized successfully 
+[ 2025-03-06 20:34:43,285 ] 35 root - INFO - Building the embedding matrix 
+[ 2025-03-06 20:34:43,285 ] 25 root - INFO - Creating Embeddings of synopsis 
+[ 2025-03-06 20:44:45,386 ] 27 root - INFO - Embeddings created Successfully 
+[ 2025-03-06 20:44:48,556 ] 38 root - INFO - Embedding matrix built successfully 

@@ -1,0 +1,33 @@
+<!-- templates/search.html -->
+{% extends 'base.html' %}
+
+{% block title %}Search Results for "{{ query }}" - AniDex{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Search Results for "{{ query }}"</h1>
+</div>
+
+<section class="anime-section">
+    <div class="anime-grid">
+        {% if search_results %}
+            {% for anime in search_results %}
+                <div class="anime-card">
+                    <a href="{{ url_for('anime_detail', anime_id=anime.mal_id) }}">
+                        <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }}">
+                        <div class="anime-card-content">
+                            <h3>{{ anime.title }}</h3>
+                            <div class="anime-info">
+                                <span>{{ anime.type or 'N/A' }}</span>
+                                <span class="rating">{{ anime.score|string + '★' if anime.score else 'N/A' }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-results">No results found for "{{ query }}".</div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

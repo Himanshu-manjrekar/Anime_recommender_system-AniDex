@@ -1,0 +1,46 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AniDex - Discover Anime{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">AniDex</a>
+            </div>
+            <div class="search-container">
+                <form action="{{ url_for('search') }}" method="get">
+                    <input type="text" name="q" placeholder="Search for anime..." required>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}" {% if request.path == url_for('home') %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ url_for('top') }}" {% if request.path == url_for('top') %}class="active"{% endif %}>Top Anime</a></li>
+                <li><a href="{{ url_for('seasonal') }}" {% if request.path == url_for('seasonal') %}class="active"{% endif %}>Seasonal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 AniDex - Powered by Jikan API</p>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="https://jikan.moe/">Jikan API</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

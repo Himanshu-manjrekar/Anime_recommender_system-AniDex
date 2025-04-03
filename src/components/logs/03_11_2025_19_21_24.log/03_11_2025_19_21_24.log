@@ -1,0 +1,16 @@
+[ 2025-03-11 19:21:42,959 ] 149 tensorflow - WARNING - From E:\Python\Data_science_project\Anime_recommender_system\anime_recommender\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+ 
+[ 2025-03-11 19:21:43,458 ] 73 root - INFO - Loading Preprocessed Data from artifacts\data\data_frame\Anime_data.pkl 
+[ 2025-03-11 19:21:43,510 ] 73 root - INFO - Loading SBERT model from artifacts\model\SBERT_model.pkl 
+[ 2025-03-11 19:21:43,651 ] 37 root - INFO - Building the embedding matrix 
+[ 2025-03-11 19:21:43,652 ] 25 root - INFO - Creating Embeddings of synopsis 
+[ 2025-03-11 19:35:10,103 ] 27 root - INFO - Embeddings created Successfully 
+[ 2025-03-11 19:35:10,103 ] 28 root - INFO - Saving the Updated data frame 
+[ 2025-03-11 19:35:10,104 ] 61 root - INFO - artifacts\data\data_frame Directory path for Data along with embeddings of synopsis 
+[ 2025-03-11 19:35:10,104 ] 63 root - INFO - Saving Data along with embeddings of synopsis 
+[ 2025-03-11 19:35:12,562 ] 66 root - INFO - Data along with embeddings of synopsis saved successfully at artifacts\data\data_frame\Anime_data_final.pkl 
+[ 2025-03-11 19:35:12,562 ] 30 root - INFO - Updated Dataframe saved successfully at artifacts\data\data_frame\Anime_data_final.pkl 
+[ 2025-03-11 19:35:12,610 ] 40 root - INFO - Embedding matrix built successfully 
+[ 2025-03-11 19:35:12,610 ] 61 root - INFO - artifacts\embedding_matrix Directory path for Embedding Matrix 
+[ 2025-03-11 19:35:12,611 ] 63 root - INFO - Saving Embedding Matrix 
+[ 2025-03-11 19:35:12,685 ] 66 root - INFO - Embedding Matrix saved successfully at artifacts\embedding_matrix\embedding_matrix.pkl 

@@ -1,0 +1,12 @@
+<!-- templates/error.html -->
+{% extends 'base.html' %}
+
+{% block title %}Error - AniDex{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <h1>Oops! Something went wrong</h1>
+    <p>{{ message }}</p>
+    <a href="{{ url_for('home') }}" class="back-home">Back to Home</a>
+</div>
+{% endblock %}

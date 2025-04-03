@@ -1,0 +1,8 @@
+[ 2025-03-06 17:53:36,318 ] 149 tensorflow - WARNING - From E:\Python\Data_science_project\Anime_recommender_system\anime_recommender\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+ 
+[ 2025-03-06 17:53:37,669 ] 36 root - INFO - Making Initial request to set the next page flag. 
+[ 2025-03-06 17:53:38,557 ] 44 root - INFO - Data Ingestion Started. 
+[ 2025-03-06 17:53:38,557 ] 80 root - INFO - 'DataIngest' object has no attribute 'base_url' 
+[ 2025-03-06 17:53:38,559 ] 28 root - INFO - Building the DataFrame 
+[ 2025-03-06 17:53:38,569 ] 30 root - INFO - Built the Dataframe successfully 
+[ 2025-03-06 17:53:38,569 ] 38 root - INFO - Transforming the Data. 

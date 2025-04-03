@@ -1,0 +1,4 @@
+[ 2025-03-06 12:03:23,738 ] 21 root - INFO - Model Initiallization Started 
+[ 2025-03-06 12:03:23,738 ] 210 sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu 
+[ 2025-03-06 12:03:23,738 ] 218 sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2 
+[ 2025-03-06 12:03:45,832 ] 23 root - INFO - Model Initiallized successfully 

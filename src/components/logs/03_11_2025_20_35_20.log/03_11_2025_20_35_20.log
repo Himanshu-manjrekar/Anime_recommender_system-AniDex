@@ -1,0 +1,5 @@
+[ 2025-03-11 20:35:41,161 ] 149 tensorflow - WARNING - From E:\Python\Data_science_project\Anime_recommender_system\anime_recommender\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+ 
+[ 2025-03-11 20:35:41,709 ] 73 root - INFO - Loading SBERT Model from artifacts\model\SBERT_model.pkl 
+[ 2025-03-11 20:35:41,879 ] 73 root - INFO - Loading Anime Data Frame from artifacts\data\data_frame\Anime_data.pkl 
+[ 2025-03-11 20:35:41,918 ] 73 root - INFO - Loading Embedding Matrix from artifacts\embedding_matrix\embedding_matrix.pkl 

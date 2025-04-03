@@ -1,0 +1,65 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Discover Amazing Anime</h1>
+        <p>Explore thousands of anime series and movies</p>
+    </div>
+</section>
+
+<section class="anime-section">
+    <h2>Top Anime</h2>
+    <div class="anime-grid">
+        {% if top_anime %}
+            {% for anime in top_anime %}
+                <div class="anime-card">
+                    <a href="{{ url_for('anime_detail', anime_id=anime.mal_id) }}">
+                        <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }}">
+                        <div class="anime-card-content">
+                            <h3>{{ anime.title }}</h3>
+                            <div class="anime-info">
+                                <span>{{ anime.type or 'N/A' }}</span>
+                                <span class="rating">{{ anime.score|string + '★' if anime.score else 'N/A' }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-results">Failed to load top anime. Please try again later.</div>
+        {% endif %}
+    </div>
+    <div class="view-more">
+        <a href="{{ url_for('top') }}" class="view-more-button">View More</a>
+    </div>
+</section>
+
+<section class="anime-section">
+    <h2>Seasonal Anime</h2>
+    <div class="anime-grid">
+        {% if seasonal_anime %}
+            {% for anime in seasonal_anime %}
+                <div class="anime-card">
+                    <a href="{{ url_for('anime_detail', anime_id=anime.mal_id) }}">
+                        <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }}">
+                        <div class="anime-card-content">
+                            <h3>{{ anime.title }}</h3>
+                            <div class="anime-info">
+                                <span>{{ anime.type or 'N/A' }}</span>
+                                <span class="rating">{{ anime.score|string + '★' if anime.score else 'N/A' }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-results">Failed to load seasonal anime. Please try again later.</div>
+        {% endif %}
+    </div>
+    <div class="view-more">
+        <a href="{{ url_for('seasonal') }}" class="view-more-button">View More</a>
+    </div>
+</section>
+{% endblock %}
