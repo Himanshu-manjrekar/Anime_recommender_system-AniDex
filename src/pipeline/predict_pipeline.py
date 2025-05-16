@@ -25,6 +25,9 @@ class Prediction:
     def perform_prediction(self, user_query):
         user_query_embedding = get_embedding(user_query, model = self.model)
         top_k_indices = cal_similarity(user_query_embedding, self.embedding_matrix)
-        recommendation = self.df.iloc[top_k_indices][["title_default", "synopsis"]]
-        return recommendation
+        recommendation = self.df.iloc[top_k_indices][["title_default", "type", "ratings", "images_url"]]
+        recommendation.reset_index(inplace =True)
+        recommendation.drop(columns=["index"], inplace=True)
+        recommendation_dict = recommendation.to_dict()
+        return recommendation_dict
 

@@ -29,6 +29,9 @@ class DataIngest:
             "synopsis": [],        # store description of Anime
             "season": [],          # store season of Anime
             "genres": [],          # store genres of Anime
+            "ratings": [],         # store ratings of Anime
+            "images_url": [],      # store images_url of Anime
+            "type": [],            # store type of Anime
         }
         try:    
             # an initial request to get "has_next_page" bool value which will be acting as a controller for while loop
@@ -55,6 +58,9 @@ class DataIngest:
                     animes["mal_id"].append(data[i]["mal_id"])               
                     animes["title_default"].append(data[i]["title"])
                     animes["title_english"].append(data[i]["title_english"])
+                    animes["ratings"].append(data[i]["score"])
+                    animes["type"].append(data[i]["type"])
+                    animes["images_url"].append(data[i]["images"]["jpg"]["image_url"])
                     # unpacking title_synonyms into unpacked_titles
                     titles = data[i]["title_synonyms"]
                     unpacked_titles = [] 

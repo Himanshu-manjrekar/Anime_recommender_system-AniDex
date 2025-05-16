@@ -1,25 +1,25 @@
 <!-- templates/search.html -->
 {% extends 'base.html' %}
 
-{% block title %}Search Results for "{{ query }}" - AniDex{% endblock %}
+{% block title %}AniDex - Discover Anime{% endblock %}
 
 {% block content %}
 <div class="page-header">
-    <h1>Search Results for "{{ query }}"</h1>
+    <h1>Search Results</h1>
 </div>
 
 <section class="anime-section">
     <div class="anime-grid">
         {% if search_results %}
-            {% for anime in search_results %}
+            {% for i in range(num_anime) %}
                 <div class="anime-card">
-                    <a href="{{ url_for('anime_detail', anime_id=anime.mal_id) }}">
-                        <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }}">
+                    <a href="#">
+                        <img src="{{ search_results['images_url'][i] }}" alt="{{ search_results['title_default'][i] }}">
                         <div class="anime-card-content">
-                            <h3>{{ anime.title }}</h3>
+                            <h3>{{ search_results['title_default'][i] }}</h3>
                             <div class="anime-info">
-                                <span>{{ anime.type or 'N/A' }}</span>
-                                <span class="rating">{{ anime.score|string + '★' if anime.score else 'N/A' }}</span>
+                                <span>{{ search_results['type'][i] or 'N/A' }}</span>
+                                <span class="rating">{{ search_results['ratings'][i]|string + '★' if search_results['ratings'][i] else 'N/A' }}</span>
                             </div>
                         </div>
                     </a>

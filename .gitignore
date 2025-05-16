@@ -1,7 +1,8 @@
 .log
-anime_recommender
+venv
 applicaation_old.py
 .ipynb
 __pycache__
 .ipynb_checkpoints
 AniDex.egg-info
+logs

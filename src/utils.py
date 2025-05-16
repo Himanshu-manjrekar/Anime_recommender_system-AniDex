@@ -87,5 +87,5 @@ def cal_similarity(user_query_embedding, embedding_matrix):
     # Compute Similarity Score
     similarities = cosine_similarity([user_query_embedding], embedding_matrix)[0]
     # get top k recommendations
-    top_k_indices = np.argsort(similarities)[::-1][:5]
+    top_k_indices = np.argsort(similarities)[::-1][:10]
     return top_k_indices

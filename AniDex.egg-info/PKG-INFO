@@ -1,4 +1,4 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.1
 Name: AniDex
 Version: 0.0.1
 Author: himanshu Manjrekar
@@ -15,6 +15,3 @@ Requires-Dist: dill
 Requires-Dist: transformers
 Requires-Dist: sentence-transformers
 Requires-Dist: tf-keras
-Dynamic: author
-Dynamic: author-email
-Dynamic: requires-dist

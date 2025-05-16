@@ -17,7 +17,7 @@ from src.exceptions import CustomException
 
 @dataclass
 class DataModeller_config:
-    dataframe_file_path: str = os.path.join("artifacts\\data\\data_frame", "Anime_data.pkl")
+    dataframe_file_path: str = os.path.join("src\\components\\artifacts\\data\\data_frame", "Anime_data.pkl")
 
 class Model_data:
     def __init__(self):

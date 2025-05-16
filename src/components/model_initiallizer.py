@@ -10,7 +10,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Model_config:
-    model_file_path : str = os.path.join("artifacts\\model", "SBERT_model.pkl")
+    model_file_path : str = os.path.join("src\\components\\artifacts\\model", "SBERT_model.pkl")
 
 class Model:
     def __init__(self):
@@ -24,4 +24,5 @@ class Model:
             return model
         except Exception as e:
             raise CustomException(e, sys)
+        
     

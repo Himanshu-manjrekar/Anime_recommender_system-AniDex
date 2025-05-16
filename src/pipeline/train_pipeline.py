@@ -10,8 +10,8 @@ from dataclasses import dataclass
 
 @dataclass
 class trainning_config:
-    embedding_matrix_path: str = os.path.join("artifacts\\embedding_matrix", "embedding_matrix.pkl")
-    updated_df_file_path: str= os.path.join("artifacts\\data\\data_frame", "Anime_data_final.pkl")
+    embedding_matrix_path: str = os.path.join("src\\components\\artifacts\\embedding_matrix", "embedding_matrix.pkl")
+    updated_df_file_path: str= os.path.join("src\\components\\artifacts\\data\\data_frame", "Anime_data_final.pkl")
 
 class start_trainning():
     def __init__(self, df, model):

@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
 import requests
 import os
+
+from flask import Flask, render_template, request, redirect, url_for
+from src.pipeline.predict_pipeline import Prediction
+
 
 app = Flask(__name__)
 
@@ -9,13 +12,6 @@ JIKAN_API_BASE_URL = "https://api.jikan.moe/v4"
 
 @app.route('/')
 def home():
-    # Get search query if present
-    search_query = request.args.get('search', '')
-    
-    # If search query is present, redirect to search results
-    if search_query:
-        return redirect(url_for('search', q=search_query))
-    
     # Get top anime from Jikan API
     top_response = requests.get(f"{JIKAN_API_BASE_URL}/top/anime", params={"limit": 12})
     top_anime = []
@@ -38,14 +34,9 @@ def search():
     query = request.args.get('q', '')
     if not query:
         return redirect(url_for('home'))
-    
-    # Search anime from Jikan API
-    response = requests.get(f"{JIKAN_API_BASE_URL}/anime", params={"q": query, "limit": 24})
-    search_results = []
-    if response.status_code == 200:
-        search_results = response.json().get('data', [])
-    
-    return render_template('search.html', search_results=search_results, query=query)
+    prediction = Prediction()
+    search_results = prediction.perform_prediction(query)
+    return render_template('search.html', search_results=search_results, num_anime = 10)
 
 @app.route('/top')
 def top():
@@ -92,6 +83,6 @@ def page_not_found(e):
 def server_error(e):
     return render_template('error.html', message="Internal server error"), 500
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+# if __name__ == '__main__':
+#     port = int(os.environ.get('PORT', 5000))
+#     app.run(host='0.0.0.0', port=port, debug=True)s
